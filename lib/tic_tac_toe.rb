@@ -56,11 +56,11 @@ def won?(board)
   winner = nil
   WIN_COMBINATIONS.each do |combo|
   if combo.all? {|idx| board[idx] == "X"}
-      winner = combo
+    winner = combo
   elsif combo.all? {|idx| board[idx] == "O"}
-      winner = combo
+    winner = combo
   else
-      false
+    false
   end
   if winner != nil
     winner
@@ -82,8 +82,8 @@ def over?(board)
 end
 
 def winner(board)
-    winner = nil
-    WIN_COMBINATIONS.each do |combo|
+  winner = nil
+  WIN_COMBINATIONS.each do |combo|
   if combo.all? {|idx| board[idx] == "X"}
     winner = "X"
   elsif combo.all? {|idx| board[idx] == "O"}
