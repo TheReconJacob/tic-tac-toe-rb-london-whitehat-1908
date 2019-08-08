@@ -41,6 +41,7 @@ def turn_count(board)
     if token == "X" or token == "O"
       counter += 1 #counter = counter
     end
+  end
   counter
 end
 
