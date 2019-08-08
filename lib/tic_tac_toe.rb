@@ -7,7 +7,7 @@ WIN_COMBINATIONS = [
   [0,3,6],
   [1,4,7],
   [2,5,8]
-  ]
+]
   
 board = Array.new(9, " ")
   
