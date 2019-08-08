@@ -118,5 +118,11 @@ def play(board)
   while !over?(board)
     turn(board)
   end
-  
+  if winner(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "Draw!"
+  else
+    return nil
+  end
 end
