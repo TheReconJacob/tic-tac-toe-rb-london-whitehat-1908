@@ -37,11 +37,11 @@ end
 
 def turn_count(board)
   counter = 0
-  board.each { |token|
+  board.each do |token|
     if token == "X" or token == "O"
       counter += 1 #counter = counter
     end
-  }
+  end
   counter
 end
 
