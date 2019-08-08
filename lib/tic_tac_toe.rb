@@ -62,7 +62,8 @@ def won?(board)
     winner = combo
   else
     false
-  end
+    end
+end
   if winner != nil
     winner
   else
