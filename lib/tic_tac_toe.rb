@@ -83,6 +83,12 @@ def over?(board)
   draw?(board) || won?(board)
 end
 
+def check_win_combination?(board, player, win_combo)
+  win_combo.all? do |position|
+    board[position] == player
+  end
+end
+
 def winner(board)
   if !won?(board)
     return nil
