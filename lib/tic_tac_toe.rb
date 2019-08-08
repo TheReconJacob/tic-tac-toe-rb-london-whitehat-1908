@@ -84,14 +84,16 @@ def over?(board)
 end
 
 def winner(board)
-  winner = nil
-  WIN_COMBINATIONS.each do |combo|
-    if combo.all? {|idx| board[idx] == "X"}
-      winner = "X"
-    elsif combo.all? {|idx| board[idx] == "O"}
-      winner = "O"
+  if !won?(board)
+    return nil
+  else WIN_COMBINATIONS.each do |win_combo|
+    if check_win_combination?(board, 'X', win_combo)
+      return 'X'
+    elsif check_win_combination?(board, 'O', win_combo)
+      return 'O'
     end
   end
+end
 end
 
 def turn(board)
